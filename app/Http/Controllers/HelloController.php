@@ -10,6 +10,7 @@ class HelloController extends Controller
         private readonly DoubleInterface $double
     ){}
 
+    #[Loggable]
     public function index()
     {
         return view('hello', [
