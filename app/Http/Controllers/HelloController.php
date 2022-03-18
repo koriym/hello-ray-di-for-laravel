@@ -14,9 +14,25 @@ class HelloController extends Controller
     private ProviderInterface $doubleProvider;
 
     public function __construct(
-        // Inject depedency
+        // Inject dependency
         private readonly DoubleInterface $double
     ){}
+
+    #[Inject]
+    public function setFooProvider(
+        #[Set(DoubleInterface::class)] ProviderInterface $provider
+    ) {
+        // Inject dependency provider
+        $this->doubleProvider = $provider;
+    }
+
+    #[PostConstruct]
+    public function init()
+    {
+        // Test provider in initialize method
+        $double1 = $this->doubleProvider->get();
+        assert($double1 instanceof DoubleInterface);
+    }
 
     #[Loggable]
     public function index()
