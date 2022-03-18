@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e4c1841dd8e6cf6c0917439d9e2be5d",
+    "content-hash": "0b694e4c4afbc769b5db3c29a1c10d07",
     "packages": [
         {
             "name": "brick/math",
@@ -3283,6 +3283,52 @@
                 "source": "https://github.com/ray-di/Ray.Di/tree/2.14.0"
             },
             "time": "2022-03-10T05:24:47+00:00"
+        },
+        {
+            "name": "ray/ray-di-for-laravel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ray-di/Ray.RayDiForLaravel.git",
+                "reference": "26e7620bd7b9b23719c031b52d1a278a717e4fe9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ray-di/Ray.RayDiForLaravel/zipball/26e7620bd7b9b23719c031b52d1a278a717e4fe9",
+                "reference": "26e7620bd7b9b23719c031b52d1a278a717e4fe9",
+                "shasum": ""
+            },
+            "require": {
+                "ray/di": "^2.14"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ray\\RayDiForLaravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "description": "Ray.Di for Laravel",
+            "keywords": [
+                "aop",
+                "di",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/ray-di/Ray.RayDiForLaravel/issues",
+                "source": "https://github.com/ray-di/Ray.RayDiForLaravel/tree/master"
+            },
+            "time": "2022-03-18T08:47:08+00:00"
         },
         {
             "name": "symfony/console",
@@ -8289,7 +8335,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "ray/ray-di-for-laravel": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -12,9 +12,8 @@
 */
 
 use App\Ray\Module;
-use App\RayRouter;
 use Ray\Di\Injector;
-use Ray\Di\NullModule;
+use Ray\RayDiForLaravel\RayRouter;
 
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
