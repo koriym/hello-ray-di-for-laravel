@@ -22,19 +22,19 @@ class HelloController extends Controller
     public function setFooProvider(
         #[Set(DoubleInterface::class)] ProviderInterface $provider
     ) {
-        // Inject dependency provider
+        // Inject lazy dependency
         $this->doubleProvider = $provider;
     }
 
     #[PostConstruct]
     public function init()
     {
-        // Test provider in initialize method
+        // Initialize method after all dependencies injected
         $double1 = $this->doubleProvider->get();
         assert($double1 instanceof DoubleInterface);
     }
 
-    #[Loggable]
+    #[Loggable] // AOP
     public function index()
     {
         return view('hello', [
@@ -42,3 +42,4 @@ class HelloController extends Controller
         ]);
     }
 }
+
