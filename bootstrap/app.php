@@ -11,7 +11,10 @@
 |
 */
 
+use App\Ray\Module;
 use App\RayRouter;
+use Ray\Di\Injector;
+use Ray\Di\NullModule;
 
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
@@ -42,7 +45,8 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
-$app['router'] = new RayRouter($app['events'], $app);
+
+$app['router'] = new RayRouter($app['events'], $app, new Injector(new Module()));
 
 /*
 |--------------------------------------------------------------------------
