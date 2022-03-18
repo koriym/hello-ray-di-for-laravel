@@ -4,6 +4,6 @@
     <title>hello</title>
 </head>
 <body>
-<h1>HelloWorld</h1>
+<h1>Hello {{ $i }}</h1>
 </body>
 </html>
