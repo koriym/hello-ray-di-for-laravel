@@ -8,6 +8,7 @@ use App\Attribute\Loggable;
 use App\Domain\Double\Dobule;
 use App\Domain\Double\DoubleInterface;
 use App\Interceptor\LoggerInterceptor;
+use Illuminate\Database\DatabaseManager;
 use Ray\Di\AbstractModule;
 
 final class Module extends AbstractModule
@@ -20,5 +21,7 @@ final class Module extends AbstractModule
             $this->matcher->annotatedWith(Loggable::class),
             [LoggerInterceptor::class]
         );
+
+        $this->bind(DatabaseManager::class)->toProvider(DatabaseManagerProvider::class);
     }
 }

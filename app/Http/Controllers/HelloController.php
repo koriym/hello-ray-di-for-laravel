@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Attribute\Loggable;
 use App\Domain\Double\DoubleInterface;
+use App\Http\Requests\GetHelloRequest;
+use Illuminate\Contracts\View\View;
 use Ray\Di\Di\Inject;
 use Ray\Di\Di\PostConstruct;
 use Ray\Di\Di\Set;
 use Ray\Di\ProviderInterface;
+use Ray\RayDiForLaravel\Attribute\Injectable;
 
+#[Injectable]
 class HelloController extends Controller
 {
     private ProviderInterface $doubleProvider;
@@ -35,11 +39,12 @@ class HelloController extends Controller
     }
 
     #[Loggable] // AOP
-    public function index()
+    public function index(GetHelloRequest $request): View
     {
+        $i = (int) ($request->validated()['i'] ?? 1);
         return view('hello', [
-            'i' => $this->double->double(1)
+            'i' => $i,
+            'doubled' => $this->double->double($i)
         ]);
     }
 }
-

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b694e4c4afbc769b5db3c29a1c10d07",
+    "content-hash": "af1814918b7d93d1daab562dc60a17e5",
     "packages": [
         {
             "name": "brick/math",
@@ -3290,16 +3290,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.RayDiForLaravel.git",
-                "reference": "26e7620bd7b9b23719c031b52d1a278a717e4fe9"
+                "reference": "5ffa72448e276724c0862012be34cd833ab1b024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.RayDiForLaravel/zipball/26e7620bd7b9b23719c031b52d1a278a717e4fe9",
-                "reference": "26e7620bd7b9b23719c031b52d1a278a717e4fe9",
+                "url": "https://api.github.com/repos/ray-di/Ray.RayDiForLaravel/zipball/5ffa72448e276724c0862012be34cd833ab1b024",
+                "reference": "5ffa72448e276724c0862012be34cd833ab1b024",
                 "shasum": ""
             },
             "require": {
+                "php": ">=8.0",
                 "ray/di": "^2.14"
+            },
+            "require-dev": {
+                "laravel/framework": "^9.8",
+                "phpunit/phpunit": "^9.5"
             },
             "default-branch": true,
             "type": "library",
@@ -3328,7 +3333,7 @@
                 "issues": "https://github.com/ray-di/Ray.RayDiForLaravel/issues",
                 "source": "https://github.com/ray-di/Ray.RayDiForLaravel/tree/master"
             },
-            "time": "2022-03-18T08:47:08+00:00"
+            "time": "2022-04-19T08:32:49+00:00"
         },
         {
             "name": "symfony/console",
