@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af1814918b7d93d1daab562dc60a17e5",
+    "content-hash": "7d33c07b233ac0c9d8ab90882984a5d2",
     "packages": [
         {
             "name": "brick/math",
@@ -215,16 +215,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "2.1.1",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "331b4d5dbaeab3827976273e9356b3b453c300ce"
+                "reference": "1ca8f21980e770095a31456042471a57bc4c68fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/331b4d5dbaeab3827976273e9356b3b453c300ce",
-                "reference": "331b4d5dbaeab3827976273e9356b3b453c300ce",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/1ca8f21980e770095a31456042471a57bc4c68fb",
+                "reference": "1ca8f21980e770095a31456042471a57bc4c68fb",
                 "shasum": ""
             },
             "require": {
@@ -234,18 +234,12 @@
                 "doctrine/common": ">2.2,<2.4"
             },
             "require-dev": {
-                "alcaeus/mongo-php-adapter": "^1.1",
                 "cache/integration-tests": "dev-master",
-                "doctrine/coding-standard": "^8.0",
-                "mongodb/mongodb": "^1.1",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
-                "predis/predis": "~1.0",
+                "doctrine/coding-standard": "^9",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
                 "psr/cache": "^1.0 || ^2.0 || ^3.0",
-                "symfony/cache": "^4.4 || ^5.2 || ^6.0@dev",
-                "symfony/var-exporter": "^4.4 || ^5.2 || ^6.0@dev"
-            },
-            "suggest": {
-                "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
+                "symfony/cache": "^4.4 || ^5.4 || ^6",
+                "symfony/var-exporter": "^4.4 || ^5.4 || ^6"
             },
             "type": "library",
             "autoload": {
@@ -294,7 +288,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/2.1.1"
+                "source": "https://github.com/doctrine/cache/tree/2.2.0"
             },
             "funding": [
                 {
@@ -310,7 +304,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-17T14:49:29+00:00"
+            "time": "2022-05-20T20:07:39+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -3222,6 +3216,67 @@
             "time": "2022-03-09T08:29:23+00:00"
         },
         {
+            "name": "ray/compiler",
+            "version": "1.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ray-di/Ray.Compiler.git",
+                "reference": "1591fa196c65bddd8ccce23ded4904eb3e375bab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ray-di/Ray.Compiler/zipball/1591fa196c65bddd8ccce23ded4904eb3e375bab",
+                "reference": "1591fa196c65bddd8ccce23ded4904eb3e375bab",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.12",
+                "doctrine/cache": "^1.10 | ^2.1",
+                "koriym/attributes": "^1.0",
+                "koriym/null-object": "^1.0",
+                "koriym/printo": "^1.0",
+                "nikic/php-parser": "^4.5",
+                "php": "^7.2 || ^8.0",
+                "ray/aop": "^2.10"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4",
+                "doctrine/cache": "^1.10",
+                "ext-pdo": "*",
+                "phpunit/phpunit": "^8.5.24 || ^9.5",
+                "ray/di": "^2.x-dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ray\\Compiler\\": [
+                        "src"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "description": "A dependency injection compiler for Ray.Di",
+            "keywords": [
+                "codegen",
+                "di",
+                "src"
+            ],
+            "support": {
+                "issues": "https://github.com/ray-di/Ray.Compiler/issues",
+                "source": "https://github.com/ray-di/Ray.Compiler/tree/1.9.1"
+            },
+            "time": "2022-06-10T17:02:29+00:00"
+        },
+        {
             "name": "ray/di",
             "version": "2.14.0",
             "source": {
@@ -3286,29 +3341,37 @@
         },
         {
             "name": "ray/ray-di-for-laravel",
-            "version": "dev-master",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.RayDiForLaravel.git",
-                "reference": "5ffa72448e276724c0862012be34cd833ab1b024"
+                "reference": "9211cda798f6b9e3178accb8b7bb7b5d4bb171c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.RayDiForLaravel/zipball/5ffa72448e276724c0862012be34cd833ab1b024",
-                "reference": "5ffa72448e276724c0862012be34cd833ab1b024",
+                "url": "https://api.github.com/repos/ray-di/Ray.RayDiForLaravel/zipball/9211cda798f6b9e3178accb8b7bb7b5d4bb171c4",
+                "reference": "9211cda798f6b9e3178accb8b7bb7b5d4bb171c4",
                 "shasum": ""
             },
             "require": {
+                "doctrine/cache": "^1.10 || ^2.2",
                 "php": ">=8.0",
+                "ray/compiler": "^1.9.1",
                 "ray/di": "^2.14"
             },
             "require-dev": {
                 "laravel/framework": "^9.8",
                 "phpunit/phpunit": "^9.5"
             },
+            "suggest": {
+                "ext-apcu": "Needed to use ApcuCacheProvider"
+            },
             "default-branch": true,
             "type": "library",
             "autoload": {
+                "files": [
+                    "src-files/apcu.php"
+                ],
                 "psr-4": {
                     "Ray\\RayDiForLaravel\\": "src/"
                 }
@@ -3331,9 +3394,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ray-di/Ray.RayDiForLaravel/issues",
-                "source": "https://github.com/ray-di/Ray.RayDiForLaravel/tree/master"
+                "source": "https://github.com/ray-di/Ray.RayDiForLaravel/tree/1.x"
             },
-            "time": "2022-04-19T08:32:49+00:00"
+            "time": "2022-10-14T15:41:41+00:00"
         },
         {
             "name": "symfony/console",
@@ -8346,8 +8409,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.0.2"
+        "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

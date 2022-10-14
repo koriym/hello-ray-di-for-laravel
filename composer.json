@@ -6,12 +6,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "doctrine/cache": "^2.2",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "ray/di": "^2.14",
-        "ray/ray-di-for-laravel": "dev-master"
+        "ray/ray-di-for-laravel": "1.x-dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
