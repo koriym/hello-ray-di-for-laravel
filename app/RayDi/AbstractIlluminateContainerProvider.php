@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Ray;
+namespace App\RayDi;
 
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Ray\Di\ProviderInterface;

@@ -11,9 +11,11 @@
 |
 */
 
+$basePath = $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__);
+$context = getenv('APP_ENV') ?: 'local';
 $app = new Ray\RayDiForLaravel\Application(
-    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__),
-    new Ray\Di\Injector(new App\Ray\Module())
+    $basePath,
+    App\RayDi\Context\ContextProvider::get($basePath, $context)
 );
 
 /*
